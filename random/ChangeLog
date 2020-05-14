@@ -1,3 +1,11 @@
+2019-06-29  Miroslav Fikar  <miroslav.fikar@stuba.sk> 3.6.0
+
+	* renderer_hack: newer version of renderer.php (Moodle 3.6.4)
+
+2018-11-13  Miroslav Fikar  <miroslav.fikar@stuba.sk> 3.4.0
+
+	* renderer_hack: newer version of renderer.php (Moodle 3.4.6)
+
 2018-05-18  Miroslav Fikar  <miroslav.fikar@stuba.sk> 3.2.0
 
 	* renderer_hack: newer version of renderer.php (Moodle 3.2)
