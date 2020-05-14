@@ -1,0 +1,144 @@
+2011-10-09  Miroslav Fikar  <miroslav.fikar@stuba.sk>
+
+	* upload.php changes from upload/upload.php copied to
+	random/upload.php 
+
+2011-04-20  Miroslav Fikar  <miroslav.fikar@stuba.sk> Version 2.0.0
+
+	* final version suitable for production (hopefully)
+
+	* upgrade.php: small improvements. Now each existing random
+	assignment in M1.9 is converted into random assignment based on
+	upload assignment with default of 3 student files. Before this
+	version, number of student files was arbitrary.
+
+	* deleted directory random/db - not needed.
+
+2011-04-14  Miroslav Fikar  <miroslav.fikar@stuba.sk> Version 2.0.1.devel
+
+	* upgrade.php should replace mod/assignment/db/upgrade.php. It
+	implements full upgrade from 1.9 including file transformation
+	from moddata/assignment/random/.
+
+	* Minor output formatting changes
+
+2011-03-26  Miroslav Fikar  <miroslav.fikar@stuba.sk> Version 2.0.0.devel
+
+	* New development version for M2.0. Unstable, upgrade from 1.9 is
+	not implemented. 
+
+2011-02-26  Miroslav Fikar  <miroslav.fikar@stuba.sk>
+
+	* file.php: modified, version 1.46.2.6 2011/02/02. Otherwise,
+	the module is not changed.
+
+2009-11-22  Miroslav Fikar  <miroslav.fikar@stuba.sk>
+
+	* assignment.class.php: changes due to MDL-20901 (fixed input
+	validation)
+
+2009-09-13  Miroslav Fikar  <miroslav.fikar@stuba.sk>
+
+	* Minor fixes to avoid notices with php debug = ALL. Thanks to
+	Alexandre Belousov.
+
+2009-08-09  Miroslav Fikar  <miroslav.fikar@stuba.sk>
+
+	* Added russian translation (ru_utf8). Thanks to Alexandre
+	Belousov. 
+
+2009-08-06  Miroslav Fikar  <miroslav.fikar@stuba.sk> Version 1.2.5
+
+	* added field that hides description of the assignment until
+	available date. Default is not hidden so that there is no change
+	in behaviour. If hidden, both assignment description and
+	assignment file are invisible until assignment opening
+	time. Thanks to Maks Mokriyev for the idea.
+
+2009-06-30  Miroslav Fikar  <miroslav.fikar@stuba.sk>
+
+	* English in directoryassignmenthlptext (file
+	ran/dom_assignment/random/lang/en_utf8/assignment_random.php)
+	cleaned.  Credit goes to Matt Greenwolfe.
+
+2009-05-01  Miroslav Fikar  <miroslav.fikar@stuba.sk> Version 1.2.4
+
+	* MDL-16796 was fixed, language files of assignment plugins can
+	finally be in their own directories. Until it goes directly to
+	core, mod/assignment/lib.php must be patched manually - see the
+	tracker. 
+	
+	* fixed typo in english language
+	file ($string['directoryassignmenthlptext'])
+
+	* language files renamed and moved to random/lang directory in
+	order to stick to Moodle standards
+
+	* assignment.class.php: changed location of language files that
+	conforms with other plugins
+
+	* file.part.php: changes in file.php for MDL-18820
+
+2008-08-14  Miroslav Fikar  <miroslav.fikar@stuba.sk> Version 1.2.3
+
+	* assignment.class.php: Copy/paste typo: function assignment_uploadsingle
+	should be assignment_random. Seems to be forgotten from 1.1.2
+
+2008-04-09    <fikar@KIRP20>  Version 1.2.2
+
+	* MDL-13792 File uploads created with Japanese file names in
+	Japanese Windows and IE cannot be downloaded. Merged from
+	uploadsingle.
+
+2008-03-20    <fikar@KIRP20> Version 1.2.1
+
+	* MDL-13899 assignments should be now sending proper submissions
+	and grading dates into gradebook. Merged from uploadsingle.
+
+2008-03-04    <fikar@KIRP20>
+
+	* Version 1.2: Compatible with Moodle 1.9, functionality
+	as 1.1.3
+
+2008-03-04    <fikar@KIRP20>
+
+	* Version 1.1.3
+
+	* MDL-13741 Incorrect max size shown when using course upload
+	limit. Merged from Moodle 1.9 uploadsingle.
+
+2008-02-28    <fikar@KIRP20>
+
+	* Version 1.1.2
+
+	* assignment.class.php: Guests should not see assignments - it can
+	cause confusion for courses with autologged guests. Some students
+	do not observe that thet are not logged in and wrongly assume to
+	see their assignment.
+
+	* assignment.class.php: Copy/paste typo: function assignment_uploadsingle
+	should be assignment_random.
+	
+	* assignment.class.php: submissions page now show assignments and
+	solutions (it is not necessary to go to individual student to see it).
+	
+2008-02-20    <fikar@KIRP20>
+
+	* Version 1.1.1
+	
+	* Bug spotted by Otakar Sprdlik - if teacher marks student before
+	student opens it, student will never get a random file.
+
+2008-02-16    <fikar@KIRP20>
+
+	* Version 1.1
+
+	* lang files packaged in _local directories (not messing up with
+	standard language files)
+
+	* typo fixes in en_utf lang file
+
+2007-20-12    <fikar@KIRP20>
+
+	* Version 1.0
+
