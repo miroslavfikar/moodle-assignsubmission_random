@@ -28,5 +28,25 @@
  * @return bool
  */
 function xmldb_assignsubmission_random_upgrade($oldversion) {
+
+    global $DB;
+    $dbman = $DB->get_manager();
+
+    if ($oldversion < 2020051400){
+
+	// add groupid field in order to be able to manage group submission
+
+        $table = new xmldb_table('assignsubmission_random');
+        $field = new xmldb_field('groupid', XMLDB_TYPE_INTEGER, '10', null, !XMLDB_NOTNULL, null, 0, "userid");
+
+        // Conditionally launch add field points.
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+
+        upgrade_plugin_savepoint(true, 2020051300, 'assignsubmission', 'random', false);
+    
+    }
+
     return true;
 }
