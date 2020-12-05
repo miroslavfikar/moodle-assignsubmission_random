@@ -65,9 +65,12 @@ class assign_submission_random extends assign_submission_plugin {
        
         $mform->addElement('filemanager', 'inputfiles', get_string('inputfiles','assignsubmission_random'), null, $fileoptions ); 
         $mform->addHelpButton('inputfiles', 'inputfiles','assignsubmission_random');
+        $mform->hideIf('inputfiles','assignsubmission_random_enabled','notchecked');
+       
          
         $mform->addElement('filemanager', 'outputfiles', get_string('outputfiles','assignsubmission_random'), null, $fileoptions ); 
-        $mform->addHelpButton('outputfiles', 'outputfiles','assignsubmission_random');             
+        $mform->addHelpButton('outputfiles', 'outputfiles','assignsubmission_random');
+        $mform->hideIf('outputfiles','assignsubmission_random_enabled','notchecked');
     }
     
     /**
