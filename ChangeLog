@@ -1,8 +1,14 @@
+2020-12-05  Sébastien Mehr (tested with Moodle 3.8.6)
+
+	* Form elements "Assignments files" and "Solutions files" are
+	always visible even if the user doesn't checked the random
+	submission type. This additional code hide them if this submission
+	type is not used.
+
 2020-05-29  MARC Matthieu 3.6.8
 
 	* delete renderer hack by moving code to locallib.php view_header function
 	* per group assignment when group submission is used
-
 
 2019-11-12  Miroslav Fikar  <miroslav.fikar@stuba.sk> 3.6.7
 
