@@ -24,7 +24,7 @@
  */
 
 $string['enabled'] = 'Povolené'; 
-$string['enabled_help'] = 'Povolený help'; 
+$string['enabled_help'] = 'Ak je povolené, študenti dostanú zadanie náhodne zo súborov pripravených učiteľom. Tiež môžu byť poskytnuté riešenia pre učiteľov.'; 
 $string['inputfiles'] = 'Súbory zadaní';
 $string['inputfiles_help'] = 'Súbory so zadaniami môžete prikladať buď po jednom súbore, alebo pri väčšom množstve si ich predtým zozipujte a po pridaní spätne odzipujete. Potom však zazipovaný súbor vymažte!<br />Ak k zadaniam existujú aj riešenia, potom súbory so zadaniami musia mať rovnaký názov ako súbory s riešeniami.';
 $string['outputfiles'] = 'Súbory riešení';

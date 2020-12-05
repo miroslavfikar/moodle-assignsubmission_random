@@ -24,7 +24,7 @@
  */
 
 $string['enabled'] = 'Enabled'; 
-$string['enabled_help'] = 'Enabled help'; 
+$string['enabled_help'] = 'If enabled, students get assignments randomly from a pool prepared by a teacher. Solutions can be provided for teachers.'; 
 $string['inputfiles'] = 'Assignments files';
 $string['inputfiles_help'] = 'Assignment files can be added ony by one or as a zip file. In the latter case unzip the file directly here and delete it afterwards. !<br />If there are solutions, the filenames have to match.';
 $string['outputfiles'] = 'Solutions files';
