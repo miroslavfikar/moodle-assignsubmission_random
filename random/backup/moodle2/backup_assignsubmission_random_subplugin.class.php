@@ -45,22 +45,28 @@ class backup_assignsubmission_random_subplugin extends backup_subplugin {
         // create XML elements
         $subplugin = $this->get_subplugin_element(); // virtual optigroup element
         $subpluginwrapper = new backup_nested_element($this->get_recommended_name());
-        $subpluginelement = new backup_nested_element('submission_random', null, array('userid', 'file_assignment', 'file_solution', 'date_save'));
+        $subpluginelement = new backup_nested_element('submission_random', null, array('assignment','userid','file_assignment', 'date_save'));
 
         // connect XML elements into the tree
         $subplugin->add_child($subpluginwrapper);
         $subpluginwrapper->add_child($subpluginelement);
 
+        // $assignid = $this->task->get_activityid();
         // set source to populate the data
-        $subpluginelement->set_source_table('assignsubmission_random', array('assignment' => backup::VAR_PARENTID));
-
+        // $subpluginelement->set_source_table('assignsubmission_random', array(
+        //     'assignment' => backup::VAR_ACTIVITYID));
+        $sql = "SELECT ar.*
+        FROM {assignsubmission_random} ar
+        JOIN {assign_submission} asub ON (ar.userid = asub.userid AND ar.assignment = asub.assignment)
+        WHERE ar.assignment = ? AND asub.id = ?";
+        $subpluginelement->set_source_sql($sql, array(backup::VAR_ACTIVITYID,backup::VAR_PARENTID));
+        
+        // We only need to backup the files in the final pdf area, and the readonly page images - the others can be regenerated.
         $subpluginelement->annotate_files('assignsubmission_random', 'outputfiles', null);
         $subpluginelement->annotate_files('assignsubmission_random', 'inputfiles', null);
         
 //        var_dump($subplugin);
 //        var_dump($subpluginelement);        
-        
-        
         return $subplugin;
     }
     

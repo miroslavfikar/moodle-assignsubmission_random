@@ -240,7 +240,7 @@ class assign_submission_random extends assign_submission_plugin {
 
                             } else {
                                 $data_insert->userid          = $USER->id;
-                                $data_inser->groupid          = 0;
+                                $data_insert->groupid          = 0;
                             }
 
                             $DB->insert_record('assignsubmission_random', $data_insert);
@@ -628,6 +628,7 @@ class assign_submission_random extends assign_submission_plugin {
         if ($this->assignment->is_any_submission_plugin_enabled()) {
             if($submission = $DB->get_record('assign_submission', array('assignment'=>$instance->id, 'userid'=>$userid))) {
                 $mode = $this->get_config('viewrandomlimit');
+                $time = time();
                 switch ($mode) {
                     case 'grade' :  $is_open = !$this->is_graded($userid);
                                     break;
@@ -645,4 +646,14 @@ class assign_submission_random extends assign_submission_plugin {
     // **************************** cca stop *******************************
     // Nepouzite 
     // **************************** cca stop *******************************     
+
+    /**
+     * Get a list of file areas associated with the plugin configuration.
+     * This is used for backup/restore.
+     *
+     * @return array names of the fileareas, can be an empty array
+     */
+    public function get_config_file_areas() {
+        return array('outputfiles','inputfiles');
+    }
 }
