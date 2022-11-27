@@ -1,3 +1,7 @@
+2022-11-27  Pham Lu Anh Duy (tested with Moodle 3.11.11) 3.11.11
+
+	* backup/restore implemented; minor typo in locallib.php
+
 2020-12-05  Sébastien Mehr (tested with Moodle 3.8.6)
 
 	* Form elements "Assignments files" and "Solutions files" are
