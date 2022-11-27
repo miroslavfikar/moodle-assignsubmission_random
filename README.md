@@ -1,15 +1,54 @@
-# Bài tập tự luận với nhiều đề bài  
-- Plugin hổ trợ tạo các hoạt động bài tập với nhiều file bài tập khác nhau tướng ứng với số lượng đề bài mà sẽ được ngẫu nhiên chia ra cho các sinh viên.   
-- Người biên soạn có thể thêm bài giải cho các bài tập phía trên (chỉ hiển thị với giảng viên).  
-- Các bài giải phải cùng tên với bài tập để có thể hiện thị cho giáo viên.   
-- Mỗi sinh viên sẽ nhận được một bài tập trong số các bài tập tồn tại trong hoạt động.  
-- Các bài tập và đề bài sẽ được phân phối cho các sinh viên chỉ khi sinh viên có truy cập vào hoạt động.  
-- Bài tập sẽ được gắn cứng cho các sinh viên sau khi đã phân phối.  
-  
-__*Chú ý: Một khi sinh viên đã nhận bài tập cho riêng mình, người biên soạn không được thay đổi bất kì file đề nào. Việc thay đổi file đề sẽ làm mất các bản ghi phân phối bài tập trước đó.*__
-### Giao diện giảng viên, biên soạn
-![Hình chụp từ 2022-11-25 13-51-26](https://user-images.githubusercontent.com/32034702/203921841-3d9bf2bd-d56d-475a-874e-7d87c9fcb86f.png)
-### Giao diện sinh viên
-![Hình chụp từ 2022-11-25 13-55-42](https://user-images.githubusercontent.com/32034702/203921870-743b1496-9f5c-4584-b103-3123a7014289.png)
-### Giao diện cài đặt
-![Hình chụp từ 2022-11-25 13-51-54](https://user-images.githubusercontent.com/32034702/203921849-be8088dd-9857-442a-9e22-19af76b7ae1e.png)
+# random_assignment
+Random assignment is a plugin fom LMS Moodle
+
+Random assignment is an attempt to handle larger classes of students.
+For this purpose, we generate a series of html (txt, pdf) files with the
+same structure but different numbers. In addition, we generate
+corresponding files with hints to solutions for teachers.
+
+Random assignment is a plugin for assignments with following
+properties:
+
+- Teacher specifies one or more files for
+  assignments and (optionally) solution files with the same names
+
+- Each student gets one of these files randomly 
+
+- In the assignment feedback page, teacher sees the assignment file
+  and optionally the solution file as well.
+
+## Installation procedure
+
+1. Copy directory random/ to moodle/mod/assign/submission/
+
+2. If needed, add your language. Language files are located in
+   moodle/mod/assign/submission/random/lang
+
+## Creation of an assignment
+
+1. Create activity: Assignment 
+1a. in Submission settings enable: Random assignment: yes and specify files for assignments and solutions.
+1b. in Submission settings specify files for assignments (Random assignment files) and solutions (Random assignment solutions).
+
+Student sees link to the assignment and, optionally its content if it
+is a html or txt file (utf-8 encoded). Teacher sees links to both files when grading 
+a student on the feedback page. Teacher also sees links to all files 
+on the assignment and feedback pages.
+
+
+miroslav.fikar[at]gmail.com
+lubos.cirka[at]stuba.sk
+April 2013
+
+Citation:
+@inproceedings{uiam1374,
+author	 = 	{{\v{C}}irka, {\v{L}}. and Kal\'uz, M. and Fikar, M.},
+title	 = 	{New Features in Random Assignment -- Module for LMS Moodle},
+booktitle	 = 	{Zborn\'ik pr\'ispevkov z medzin\'arodnej vedeckej konferencie: Inova\v{c}n\'y proces v e-learningu},
+year	 = 	{2013},
+pages	 = 	{1-6},
+publisher	 = 	{Ekon\'om},
+url	 = 	{https://www.uiam.sk/assets/publication_info.php?id_pub=1374}
+} 
+
+<a href="https://www.uiam.sk/assets/publication_info.php?id_pub=1374">Full paper</a>
