@@ -69,7 +69,10 @@ class restore_assignsubmission_random_subplugin extends restore_subplugin {
         // the mapping is set in the restore for the core assign activity. When a submission node is processed
         $data->submission = $this->get_mappingid('submission', $data->submission);
 
-        $DB->insert_record('assignsubmission_random', $data);
+        $exist = $DB->record_exists('assignsubmission_random', array('assignment' => $data->assignment, 'userid' => $data->userid));
+        if(!$exist) {
+            $DB->insert_record('assignsubmission_random', $data);
+        }
         
         $this->add_related_files('assignsubmission_random', 'submission_random', 'submission', null, $oldsubmissionid);
     }
