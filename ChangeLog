@@ -1,3 +1,7 @@
+2024-01-02  Miroslav Fikar  <miroslav.fikar@stuba.sk>
+
+	* security review by PragoData
+
 2022-11-27  Pham Lu Anh Duy (tested with Moodle 3.11.11) 3.11.11
 
 	* backup/restore implemented; minor typo in locallib.php

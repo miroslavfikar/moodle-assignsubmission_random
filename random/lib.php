@@ -44,9 +44,11 @@ function assignsubmission_random_pluginfile($course, $cm, context $context, $fil
     if ($context->contextlevel != CONTEXT_MODULE) {
         return false;
     }  
-
+    
     if ($filearea == 'inputfiles') {
         // Inputfiles
+        require_login();
+        
         if (!has_capability('mod/assign:grade', $context)) {
             require_capability('mod/assign:submit', $context);
         }
@@ -56,10 +58,9 @@ function assignsubmission_random_pluginfile($course, $cm, context $context, $fil
 
     } elseif ($filearea == 'outputfiles') {
         // Outputfiles
-        if (!has_capability('mod/assign:grade', $context)) {
-            require_capability('mod/assign:submit', $context);
-        }
-
+        require_login();
+        require_capability('mod/assign:grade', $context);
+        
         $itemid = 0;
         $filename = array_pop($args);
 

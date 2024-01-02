@@ -22,9 +22,9 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$plugin->version   = 2020051400;
-$plugin->requires  = 2018051700; 			// moodle 3.5
+$plugin->version   = 2023120400;
+$plugin->requires  = 2020061500; 			// moodle 3.9
 $plugin->component = 'assignsubmission_random';
-$plugin->release   = "3.5.0 (Build 2020051400)";
+$plugin->release   = "3.5.0 (Build 2023120400)";
 $plugin->maturity  = MATURITY_STABLE;
 $plugin->cron      = 0;
