@@ -1,4 +1,4 @@
-# random_assignment
+# moodle-assignsubmission_random
 Random assignment is a plugin fom LMS Moodle
 
 Random assignment is an attempt to handle larger classes of students.
