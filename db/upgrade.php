@@ -44,7 +44,7 @@ function xmldb_assignsubmission_random_upgrade($oldversion) {
             $dbman->add_field($table, $field);
         }
 
-        upgrade_plugin_savepoint(true, 2020051300, 'assignsubmission', 'random', false);
+        upgrade_plugin_savepoint(true, 2020051400, 'assignsubmission', 'random', false);
     
     }
 
