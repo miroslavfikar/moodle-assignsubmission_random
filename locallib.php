@@ -249,16 +249,8 @@ class assign_submission_random extends assign_submission_plugin {
                 }
             }   
         } 
-        // $_GET['action'] == 'grading' - in older versions 
-        // $_GET['action'] == 'grade' - in newer versions 
-        // if one of these is chosen => set hide_list to 1 <= not to show list in grader report
-        $hide_list = 0;       
-        if(isset($_GET['action'])) {
-            if($_GET['action'] == 'grading' || $_GET['action'] == 'grade')
-                $hide_list = 1;
-        }
         
-        if($plugin_random->value && !$hide_list) { 
+        if($plugin_random->value &&) { 
             $o .= "<div class='box generalbox boxaligncenter boxwidthnormal' id='random_assignment_list'>\n";
 
             if(has_capability('mod/assign:grade', $this->assignment->get_context())) {
