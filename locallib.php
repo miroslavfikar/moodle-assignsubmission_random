@@ -250,7 +250,7 @@ class assign_submission_random extends assign_submission_plugin {
             }   
         } 
         
-        if($plugin_random->value &&) { 
+        if($plugin_random->value) { 
             $o .= "<div class='box generalbox boxaligncenter boxwidthnormal' id='random_assignment_list'>\n";
 
             if(has_capability('mod/assign:grade', $this->assignment->get_context())) {
